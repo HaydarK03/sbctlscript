@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/sbctl-enroll-script.sh
+ExecStart=/bin/bash -c "/usr/local/bin/sbctl-enroll-script.sh; systemctl disable sbctl-sign.service"
 RemainAfterExit=no
 
 [Install]
