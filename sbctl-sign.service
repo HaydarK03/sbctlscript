@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/sbctl-enroll-script
+ExecStart=/usr/local/bin/sbctl-enroll-script.sh
 RemainAfterExit=no
 
 [Install]
