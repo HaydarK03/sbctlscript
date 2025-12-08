@@ -18,7 +18,7 @@ if [ -f "$hook_file" ]; then
         rm "$hook_file"
 fi
 if [ -f "$script_file" ]; then
-        rm "$hook_file"
+        rm "$script_file"
 fi
 
 echo "clean up complete"
