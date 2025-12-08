@@ -1,1 +1,9 @@
-heret3st
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Running sbctl script
+When = PostTransaction
+Exec = /usr/local/bin/sbctl-enroll-script.sh
