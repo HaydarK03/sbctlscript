@@ -17,6 +17,6 @@ function gen_secboot {
         done &&
         
         cp $path/sbctl-enroll-script.sh /usr/local/bin/ &&
-        cp $path/99-sbctl.hook /etc/pacman.d/hook
+        cp $path/99-sbctl.hook /etc/pacman.d/hooks/
 }
 gen_secboot
