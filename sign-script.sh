@@ -11,7 +11,7 @@ function gen_secboot {
         for vmlinuz in "${kernel[@]}"; do
                 sbctl sign --save /boot/kernel/$vmlinuz
         done &&
-        cp ~/sbctl-enroll-script /var/lib/ &&
+        cp ~/sbctl-enroll-script.sh /usr/local/bin/ &&
         cp ~/sbctl-sign.service /etc/systemd/system/
         sudo systemctl daemon-reload &&
         sudo systemctl enable sbctl-sign &&
