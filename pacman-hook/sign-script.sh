@@ -7,14 +7,14 @@ function gen_secboot {
         
         for efi in "${linux[@]}"; do
                 sbctl sign --save /boot/efi/linux/$efi
-        done &&
+        done
         
         sbctl sign --save /boot/EFI/Boot/bootx64.efi &&
         sbctl sign --save /boot/EFI/systemd/systemd-bootx64.efi &&
         
         for vmlinuz in "${kernel[@]}"; do
                 sbctl sign --save /boot/kernel/$vmlinuz
-        done &&
+        done
         
         cp $path/sbctl-enroll-script.sh /usr/local/bin/ &&
         cp $path/99-sbctl.hook /etc/pacman.d/hooks/ &&
