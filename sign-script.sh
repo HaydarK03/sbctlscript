@@ -19,6 +19,6 @@ function gen_secboot {
         cp $path/sbctl-enroll-script.sh /usr/local/bin/ &&
         cp $path/sbctl-sign.service /etc/systemd/system/ &&
         sudo systemctl enable sbctl-sign &&
-        sudo systemctl start sbctl-sign &&
+        sudo systemctl start sbctl-sign
 }
 gen_secboot
