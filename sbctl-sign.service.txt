@@ -1,0 +1,11 @@
+[Unit]
+Description=enroll secure boot key microsoft
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/sbctl-enroll-script
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
