@@ -5,5 +5,5 @@ Target = *
 
 [Action]
 Description = Running sbctl script
-When = PostTransaction
+When = PreTransaction
 Exec = /usr/local/bin/sbctl-enroll-script.sh
