@@ -4,7 +4,8 @@ linux=($(ls /boot/efi/linux/))
 kernel=($(ls /boot/kernel | grep vmlinuz))
 function gen_secboot {
         sbctl create-keys &&
-        
+        sbctl enroll-keys -m -i &&
+        sbctl verify | sed -E 's|^.* (/.+) is not signed$|sbctl sign -s "\1"|e' &&
         for efi in "${linux[@]}"; do
                 sbctl sign --save /boot/efi/linux/$efi
         done
