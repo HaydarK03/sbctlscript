@@ -15,9 +15,5 @@ function gen_secboot {
         for vmlinuz in "${kernel[@]}"; do
                 sbctl sign --save /boot/kernel/$vmlinuz
         done
-        
-        cp $path/sbctl-enroll-script.sh /usr/local/bin/ &&
-        cp $path/99-sbctl.hook /etc/pacman.d/hooks/ &&
-        pacman -Syu sbctl --noconfirm
 }
 gen_secboot
