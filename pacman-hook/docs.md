@@ -5,7 +5,14 @@
 2. masuk ke setup mode secureboot
 3. booting ke linux
 
-## setup
+## setup standar
+
+1. git clone https://github.com/haydark03/sbctlscript
+2. cd sbctlscript/pacman-hook
+3. chmod +x sign-script.sh
+4. ./sign-script.sh
+
+## setup custom
 
 
 cari partisi boot windows
